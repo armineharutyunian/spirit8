@@ -442,6 +442,13 @@ header #cb + label img {
   width: 125px;
   height: 125px;
   margin: 0 auto;
+  transition: all 0.2s;
+  box-shadow: 0 0 0 0 #fcac45, 0 0 0 0 #fcac45;
+}
+
+.p-services .cards .card img:hover {
+  padding: 9px;
+  box-shadow: 0 0 0 4px #fcac45, 0 0 0 9px #fcac45;
 }
 
 .p-services .cards .card-title {
