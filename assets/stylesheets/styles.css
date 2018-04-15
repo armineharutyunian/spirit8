@@ -1,0 +1,1218 @@
+/*====================================================
+                    FONTS
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700');
+
+.site-name, .main-menu li {
+  font-family: 'Lato', sans-serif;
+}
+
+.welcoming, .about-right-side .title h1,
+.about-right-side .title h2, .about-right-side .about,
+.about-right-side .radio-like, .about-right-side button,
+.component-title h1, .p-team .staff-card .name,
+.p-team .staff-card .caption, .p-team .staff-card .intro,
+.p-services .about, .p-services .cards h1,
+.p-services .cards .card-description, .p-portfolio .about,
+.p-portfolio .works .overlay h2, .p-portfolio .works .overlay span,
+.p-testimonials .item p, .p-testimonials .item span,
+.p-contact .about, .contact-form p, .contact-form button,
+footer .footer-left p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*====================================================
+                  GLOBAL STYLES
+====================================================*/
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  min-width: 540px;
+}
+
+/*====================================================
+                  START
+====================================================*/
+
+.start.content-wrapper {
+  background-color: #111;
+}
+
+.p-start {
+  width: 1140px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 55px;
+  position: relative;
+}
+
+header:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
+
+.site-name {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+
+.site-name h1 {
+  font-size: 24px;
+  margin: 0px;
+}
+
+header nav {
+  display: inline-block;
+  float: right;
+}
+
+#cb {
+  display: none;
+}
+
+header #cb + label {
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+header #cb + label img {
+  width: 45px;
+  height: 40px;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-right: 27px;
+  cursor: pointer;
+  position: relative;
+}
+
+.main-menu li:last-child {
+  margin-right: 0px;
+}
+
+.main-menu .border {
+  background: linear-gradient(to right, #292929 50%, #fcac45 50%);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 40px;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
+
+.main-menu li:hover .border{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.welcoming {
+  margin-top: 200px;
+  margin-bottom: 275px;
+  text-align: center;
+}
+
+.welcoming h1 {
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 44px;
+  color: #999;
+  font-weight: lighter;
+}
+
+.welcoming h1 span {
+  font-weight: bold;
+  color: #fcac45;
+}
+
+.welcoming .about {
+  font-size: 20px;
+  color: white;
+  font-weight: lighter;
+}
+
+.scroll-btn {
+  text-align: center;
+  bottom: 90px;
+  left: calc(50% - 25px);
+  position: absolute;
+}
+
+.scroll-btn img {
+  border-radius: 50px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  transition: all .2s ease;
+  box-shadow: 0 0 0 0 #fcac45, 0 0 0 0 #fcac45;
+}
+
+.scroll-btn img:hover {
+  padding: 5px;
+  box-shadow: 0 0 0 2px #fcac45, 0 0 0 3px #fcac45;
+}
+
+/*====================================================
+                  ABOUT
+====================================================*/
+
+.about.content-wrapper {
+  background-color: white;
+}
+
+.p-about {
+  position: relative;
+  padding: 100px 0px;
+  margin: 0 auto;
+  width: 1140px;
+  height: 610px;
+}
+
+.about-left-side {
+  position: absolute;
+}
+
+.about-right-side {
+  display: inline-block;
+  float: right;
+  width: 457px;
+}
+
+.about-right-side .title h1 {
+  margin: 0px;
+  color: #636363;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.about-right-side .title h2 {
+  margin: 0px;
+  color: #222;
+  font-size: 34px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.about-right-side .title h2 span {
+  border-bottom: 4px solid #fdbd6a;
+  padding-bottom: 5px;
+}
+
+.about-right-side .about {
+  color: #6c6c6c;
+  font-size: 18px;
+  margin: 30px 0px;
+}
+
+.radio-like {
+  list-style: url(../images/radiobtn.png);
+  padding-left: 25px;
+  margin: 12px 0px 32px;
+}
+
+.radio-like li {
+  color: #5a5a5a;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+.radio-like li:last-child {
+  padding-bottom: 0px;
+}
+
+.radio-like span {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.about-right-side button {
+  width: 195px;
+  text-align: center;
+  padding: 15px 22px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #616161;
+  font-size: 12px;
+  transition: all 0.5s;
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #616161;
+  cursor: pointer;
+}
+
+.about-right-side button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background-color: rgba(252,172,69,0.5);
+  transition: all 0.4s;
+  transform: scale(0.5, 1);
+}
+
+.about-right-side button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.about-right-side button img {
+  padding-right: 10px;
+}
+
+/*====================================================
+                  TEAM
+====================================================*/
+
+.team.content-wrapper {
+  background-color: #070707;
+}
+
+.p-team {
+  padding: 85px 0px;
+  margin: 0 auto;
+  width: 1140px;
+  height: 725px;
+}
+
+.component-title {
+  text-align: center;
+}
+
+.component-title h1 {
+  font-size: 44px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0px;
+  padding-bottom: 30px;
+}
+
+.component-title h1 span {
+  font-weight: 600;
+}
+
+.dividers .thick, .dividers .thin {
+  margin: 0 auto;
+  height: 4px;
+  background-color: #fcac45;
+}
+
+.dividers {
+  margin-bottom: 20px;
+}
+
+.dividers .thick {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.dividers .thin {
+  width: 65px;
+  opacity: 0.7;
+}
+
+.p-team .cards {
+  margin: 70px 0px;
+}
+
+.p-team .cards:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
+
+.p-team .staff-card {
+  text-align: center;
+  color: white;
+  display: inline-block;
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+}
+
+.p-team .staff-card .avatar {
+  width: 125px;
+  height: 125px;
+  border-radius: 62px;
+  background-color: #d7d7d7;
+  margin: 0 auto;
+}
+
+.p-team .staff-card .name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+}
+
+.p-team .staff-card .caption {
+  font-size: 16px;
+}
+
+.p-team .staff-card .intro {
+  font-size: 14px;
+  margin: 30px 0px 0px;
+}
+
+/*====================================================
+                  SERVICES
+====================================================*/
+
+.services.content-wrapper {
+  background-color: white;
+}
+
+.p-services {
+  padding: 85px 0px;
+  width: 1140px;
+  margin: 0 auto;
+  height: 735px;
+}
+
+.p-services .component-title h1 {
+  color: #222;
+}
+
+.p-services .about {
+  font-size: 16px;
+  color: #6c6c6c;
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.p-services .cards .card {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  color: #222;
+}
+
+.p-services .cards:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+.p-services .cards .card img {
+  border-radius: 100px;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  transition: all 0.2s;
+  box-shadow: 0 0 0 0 #fcac45, 0 0 0 0 #fcac45;
+}
+
+.p-services .cards .card img:hover {
+  padding: 9px;
+  box-shadow: 0 0 0 4px #fcac45, 0 0 0 9px #fcac45;
+}
+
+.p-services .cards .card-title {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 15px 0px 0px;
+}
+
+.p-services .cards .card-description {
+  font-size: 14px;
+  margin: 10px 0px 0px;
+}
+
+/*====================================================
+                  CLIENTS
+====================================================*/
+
+.clients.content-wrapper {
+  background-color: #0b0b0b;
+}
+
+.p-clients {
+  padding: 85px 0px;
+  margin: 0 auto;
+  width: 945px;
+  height: 520px;
+}
+
+.p-clients .client-list {
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.p-clients img {
+  width: 20%;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.p-clients .client-list:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*====================================================
+                  PORTFOLIO
+====================================================*/
+
+.portfolio.content-wrapper {
+  background-color: white;
+}
+
+.p-portfolio {
+  padding: 85px 0px;
+  margin: 0 auto;
+  width: 1140px;
+  height: 1330px;
+}
+
+.p-portfolio .component-title h1 {
+  color: #222;
+}
+
+.p-portfolio .about {
+  font-size: 16px;
+  color: #6c6c6c;
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.p-portfolio .filtering-row {
+  padding-bottom: 50px;
+}
+
+.p-portfolio .filtering-left {
+  text-transform: uppercase;
+  float: left;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 15px;
+  margin: 0px;
+}
+
+.p-portfolio .filtering-right {
+  float: right;
+}
+
+.p-portfolio .filtering-right ul {
+  list-style: none;
+  margin: 0px;
+}
+
+.p-portfolio .filtering-right li {
+  color: #6c6c6c;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.p-portfolio .filtering-right .active {
+  color: #222;
+  font-weight: 600;
+}
+
+.p-portfolio .works:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.p-portfolio .works .item {
+  width: 25%;
+  padding-bottom: 20%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+.p-portfolio .works .item img {
+  height: 100%;
+  position: absolute;
+}
+
+.p-portfolio .works .overlay {
+  text-align: center;
+  padding-top: 55px;
+  padding-bottom: 43px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.p-portfolio .works .overlay h2{
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  font-weight: 600;
+}
+
+.p-portfolio .works .overlay span{
+  font-size: 14px;
+  color: #b2b2b2;
+  font-weight: 600;
+  display: block;
+  margin: 10px 0px 30px;
+}
+
+.p-portfolio .works .overlay .icon-like {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-image: url(../images/plus-icon.png);
+}
+
+.p-portfolio .works .item:hover .overlay {
+  display: block;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.5s;
+  top:0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.gallery-item {
+  position: absolute;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.closing-btn {
+  background-image: url(../images/close-button.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/*====================================================
+                  TESTIMONIALS
+====================================================*/
+
+.testimonials.content-wrapper {
+  background-color: #0b0b0b;
+}
+
+.p-testimonials {
+  padding: 85px 0px;
+  margin: 0 auto;
+  width: 945px;
+  height: 560px;
+}
+
+.p-testimonials .item {
+  text-align: center;
+}
+
+.p-testimonials .item p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e7e7e7;
+  text-transform: uppercase;
+  margin: 90px 0px 50px;
+}
+
+.p-testimonials .item span {
+  color: #b2b2b2;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.p-testimonials .item span.position {
+  font-weight: 300;
+}
+
+/*====================================================
+                  CONTACT
+====================================================*/
+
+.contact.content-wrapper {
+  background-color: white;
+}
+
+.p-contact {
+  padding: 85px 0px;
+  margin: 0 auto;
+  width: 750px;
+  height: 830px;
+}
+
+.p-contact .component-title h1 {
+  color: #222;
+}
+
+.p-contact .about {
+  font-size: 16px;
+  color: #6c6c6c;
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.contact-form .input-group-left {
+  width: 50%;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.contact-form .input-group-right {
+  width: 50%;
+  float: right;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.contact-form .input-group-right:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.contact-form input[type="text"] {
+  width: 99%;
+  height: 40px;
+}
+
+.contact-form textarea {
+  width: 99%;
+}
+
+.contact-form .message-area {
+  width: 100%;
+  clear: both;
+  padding: 30px 15px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  resize: none;
+}
+
+.contact-form p {
+  color: #636363;
+  font-size: 14px;
+}
+
+.contact-form p .red {
+  color: #db0000;
+}
+
+.contact-form button {
+  width: 165px;
+  height: 40px;
+  background-color: #fcac45;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.1s;
+  border: none;
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  color: #fcac45;
+  background-color: white;
+  border: 0.2px solid #fcac45;
+}
+
+/*====================================================
+                  FOOTER
+====================================================*/
+
+footer {
+  background-color: #0b0b0b;
+}
+
+footer .wrapper {
+  padding-top: 30px;
+  height: 90px;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+footer .footer-left {
+  float: left;
+}
+
+footer .footer-left p {
+  color: #b2b2b2;
+  font-size: 12px;
+  margin: 0;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+footer .footer-left span{
+  font-weight: bold;
+}
+
+footer .footer-right {
+  float: right;
+}
+
+footer .footer-right a {
+  margin-right: 15px;
+}
+
+footer .footer-right img {
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all .2s ease;
+  box-shadow: 0 0 0 0 #000, 0 0 0 0 #fcac45;
+}
+
+footer .footer-right img:hover {
+  box-shadow: 0 0 0 4px #000, 0 0 0 5px #fcac45;
+}
+
+footer .footer-right img:last-child {
+  margin-right: 0px;
+}
+
+/*====================================================
+         MEDIA RULES FOR DIF. SCREENS
+====================================================*/
+
+@media screen and (max-width: 1140px) {
+  .p-start, .p-about,
+  .p-team, .p-services,
+  .p-portfolio, footer .wrapper {
+    width: 900px;
+  }
+
+  .welcoming {
+    margin-top: 100px;
+    margin-bottom: 175px;
+  }
+
+  .p-about .about-left-side img{
+    width: 80%;
+  }
+
+  .p-portfolio {
+    height: auto;
+  }
+
+  .p-portfolio .works .overlay {
+    padding: 20px;
+  }
+
+  .p-portfolio .works .overlay h2 {
+    font-size: 21px;
+  }
+
+  .p-portfolio .works .overlay span {
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .p-start, .p-about,
+  .p-team, .p-services,
+  .p-portfolio, footer .wrapper,
+  .p-clients, .p-testimonials,
+  .p-contact {
+    width: 600px;
+  }
+
+  .main-menu li {
+    margin-right: 10px;
+  }
+
+  .main-menu a {
+    font-size: 10px;
+  }
+
+  .p-about, .p-team, .p-services,
+  .p-clients, .p-portfolio,
+  .p-testimonials {
+    padding: 50px 0px;
+  }
+
+  .p-team .staff-card {
+    width: 50%;
+    padding-bottom: 25px;
+  }
+
+  .about-right-side {
+    width: 300px;
+  }
+
+  .component-title h1 {
+    font-size: 30px;
+  }
+
+  .p-about .about-left-side img{
+    width: 60%;
+  }
+
+  .about-right-side .title h2 {
+    font-size: 25px;
+  }
+
+  .p-services .about, .p-portfolio .about {
+    margin-bottom: 50px;
+  }
+
+  .p-portfolio .filtering-right li {
+    padding-left: 0px;
+  }
+
+  .p-portfolio .works .overlay {
+    padding: 10px 5px;
+  }
+
+  .p-portfolio .works .overlay h2 {
+    font-size: 20px;
+  }
+
+  .p-portfolio .works .overlay .icon-like {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+
+  .p-portfolio .works .item {
+    width: 32%;
+    padding-bottom: 22%;
+  }
+
+  .p-portfolio .works .overlay span {
+    font-size: 15px;
+    margin: 10px 0px;
+  }
+
+  .p-team, .p-clients,
+  .p-services,
+  .p-testimonials,
+  .p-portfolio {
+    height: auto;
+  }
+
+  .p-services .cards .card {
+    width: 50%;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .p-start, .p-about,
+  .p-team, .p-services,
+  .p-portfolio, footer .wrapper,
+  .p-clients, .p-testimonials,
+  .p-contact {
+    width: 480px;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    text-align: center;
+    height: 225px;
+    width: 100%;
+    background-color: #fcac45;
+    display: none;
+  }
+
+  header nav:hover {
+    display: block;
+  }
+
+  nav ul li {
+    width: 50%;
+    margin-right: 0px;
+    padding: 8px;
+  }
+
+  nav ul li .border {
+    display: none;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  header #cb + label {
+    display: block;
+  }
+
+  #cb:checked ~nav {
+    display: block;
+  }
+
+  .about-left-side {
+    position: relative;
+  }
+
+  .p-about .about-left-side img {
+    width: 100%;
+  }
+
+  .about-right-side {
+    float: none;
+    width: 500px;
+  }
+
+  .p-team .staff-card {
+    width: 100%;
+  }
+
+  .p-team, .p-about, .p-contact {
+    height: auto;
+  }
+
+  .p-services .about {
+    font-size: 17px;
+  }
+
+  .p-services .cards .card {
+    width: 100%;
+  }
+
+  .p-portfolio .filtering-right,
+  .p-portfolio .filtering-left {
+    float: none;
+  }
+
+  .p-portfolio .filtering-right ul {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+
+  .p-portfolio .works .overlay {
+    padding: 50px 0px;
+    width: 95%;
+  }
+
+  .scroll-btn {
+    left: calc(50% - 35px);
+  }
+
+  .scroll-btn img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .p-portfolio .works .overlay h2 {
+    font-size: 20px;
+  }
+
+  .p-portfolio .works .overlay .icon-like {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+
+  .p-portfolio .works .item {
+    width: 50%;
+    padding-bottom: 35%;
+  }
+
+  .p-portfolio .works .overlay span {
+    font-size: 15px;
+    margin: 10px 0px;
+  }
+
+  .contact-form .input-group-right,
+  .contact-form .input-group-left {
+    width: 100%;
+    float: none;
+  }
+
+  footer .wrapper {
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  footer .footer-left,
+  footer .footer-right {
+    float: none;
+  }
+
+  footer .footer-right {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .site-name h1 {
+    font-size: 35px;
+  }
+
+  .about-right-side .about {
+    font-size: 25px;
+  }
+
+  .welcoming {
+    margin-bottom: 90px;
+  }
+
+  .welcoming .about, .contact-form p {
+    font-size: 24px;
+  }
+
+  .about-right-side .title h1 {
+    font-size: 30px;
+  }
+
+  .about-right-side .title h2 {
+    font-size: 35px;
+  }
+
+  .radio-like li {
+    font-size: 25px;
+  }
+
+  .contact-form textarea {
+    width: 99%;
+  }
+
+  .about-right-side button {
+    width: 250px;
+    font-size: 18px;
+  }
+
+  .p-team .staff-card .name {
+    font-size: 30px;
+  }
+
+  .p-team .staff-card .caption,
+  .p-services .about,
+  .p-portfolio .about,
+  .p-portfolio .filtering-right li,
+  .p-testimonials .item p,
+  .p-contact .about {
+    font-size: 23px;
+  }
+
+  .p-team .staff-card .intro,
+  .p-portfolio .filtering-left {
+    font-size: 24px;
+  }
+
+  .p-services .cards .card-description,
+  .p-testimonials .item span {
+    font-size: 20px;
+  }
+
+  .p-testimonials .item p {
+    margin: 40px 0px;
+  }
+
+  .p-portfolio .works .item {
+    width: 32%;
+    padding-bottom: 22%;
+  }
+
+  .p-contact, .p-portfolio {
+    height: auto;
+  }
+
+  .contact-form button {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+  }
+
+  footer .footer-left p {
+    font-size: 15px;
+  }
+
+  header #cb + label img {
+    width: 50px;
+    height: 45px;
+  }
+
+  header nav {
+    top: 145px;
+    height: 245px;
+  }
+
+  .main-menu a {
+    font-size: 20px;
+  }
+
+  .p-portfolio .works .item {
+    width: 50%;
+    padding-bottom: 35%;
+  }
+}
