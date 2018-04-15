@@ -425,8 +425,7 @@ header #cb + label img {
   display: inline-block;
   width: 25%;
   float: left;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 10px 15px 0px;
   text-align: center;
   color: #222;
 }
